@@ -6,7 +6,7 @@
 # catalog-version 0.3a
 Name:		texlive-bxjscls
 Version:	0.3a
-Release:	7
+Release:	8
 Summary:	Document classes based on jsclasses
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/language/japanese/BX/bxjscls
