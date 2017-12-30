@@ -1,12 +1,6 @@
-# revision 28901
-# category Package
-# catalog-ctan /language/japanese/BX/bxjscls
-# catalog-date 2012-12-21 17:28:17 +0100
-# catalog-license other-free
-# catalog-version 0.3a
 Name:		texlive-bxjscls
-Version:	0.3a
-Release:	9
+Version:	1.7a
+Release:	1
 Summary:	Document classes based on jsclasses
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/language/japanese/BX/bxjscls
@@ -32,15 +26,10 @@ Provides classes, based on jsclasses.
 
 #-----------------------------------------------------------------------
 %files
-%{_texmfdistdir}/tex/latex/bxjscls/bxjsarticle.cls
-%{_texmfdistdir}/tex/latex/bxjscls/bxjsptex.def
-%{_texmfdistdir}/tex/latex/bxjscls/bxjsreport.cls
-%doc %{_texmfdistdir}/doc/latex/bxjscls/LICENSE
-%doc %{_texmfdistdir}/doc/latex/bxjscls/README
-%doc %{_texmfdistdir}/doc/latex/bxjscls/bxjsclasses.pdf
+%{_texmfdistdir}/tex/latex/bxjscls
+%doc %{_texmfdistdir}/doc/latex/bxjscls
 #- source
-%doc %{_texmfdistdir}/source/latex/bxjscls/bxjsclasses.dtx
-%doc %{_texmfdistdir}/source/latex/bxjscls/bxjsclasses.ins
+%doc %{_texmfdistdir}/source/latex/bxjscls
 
 #-----------------------------------------------------------------------
 %prep
