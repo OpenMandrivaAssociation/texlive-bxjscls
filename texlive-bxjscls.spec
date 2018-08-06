@@ -1,5 +1,5 @@
 Name:		texlive-bxjscls
-Version:	1.9
+Version:	1.9a
 Release:	1
 Summary:	Document classes based on jsclasses
 Group:		Publishing
