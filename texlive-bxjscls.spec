@@ -1,6 +1,6 @@
 Name:		texlive-bxjscls
-Version:	1.9a
-Release:	2
+Version:	1.9f
+Release:	1
 Summary:	Document classes based on jsclasses
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/language/japanese/BX/bxjscls
