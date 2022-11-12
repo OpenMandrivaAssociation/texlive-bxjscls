@@ -1,13 +1,13 @@
 Name:		texlive-bxjscls
-Version:	1.9f
+Version:	63011
 Release:	1
 Summary:	Document classes based on jsclasses
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/language/japanese/BX/bxjscls
 License:	OTHER-FREE
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bxjscls.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bxjscls.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bxjscls.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bxjscls.r63011.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bxjscls.doc.r63011.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bxjscls.source.r63011.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -17,12 +17,12 @@ Requires(post):	texlive-kpathsea
 Provides classes, based on jsclasses.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -33,7 +33,8 @@ Provides classes, based on jsclasses.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
