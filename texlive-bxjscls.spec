@@ -1,5 +1,5 @@
 Name:		texlive-bxjscls
-Version:	67657
+Version:	69637
 Release:	1
 Summary:	Document classes based on jsclasses
 Group:		Publishing
