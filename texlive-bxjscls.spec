@@ -3,7 +3,7 @@ Version:	71848
 Release:	1
 Summary:	Document classes based on jsclasses
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/language/japanese/BX/bxjscls
+URL:		https://www.ctan.org/tex-archive/language/japanese/BX/bxjscls
 License:	OTHER-FREE
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bxjscls.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bxjscls.doc.r%{version}.tar.xz
