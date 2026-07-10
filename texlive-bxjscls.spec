@@ -1,43 +1,27 @@
-Name:		texlive-bxjscls
-Version:	71848
-Release:	1
-Summary:	Document classes based on jsclasses
+%global tl_name bxjscls
+%global tl_revision 79198
+
+Name:		texlive-%{tl_name}
+Epoch:		1
+Version:	2.9f
+Release:	%{tl_revision}.1
+Summary:	Japanese document class collection for all major engines
 Group:		Publishing
 URL:		https://www.ctan.org/tex-archive/language/japanese/BX/bxjscls
-License:	OTHER-FREE
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bxjscls.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bxjscls.doc.r%{version}.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bxjscls.source.r%{version}.tar.xz
+License:	bsd2
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/bxjscls.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/bxjscls.doc.r%{tl_revision}.tar.xz
+Source2:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/bxjscls.source.r%{tl_revision}.tar.xz
 BuildArch:	noarch
+BuildSystem:	texlive
 BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+%texlive_base_requires
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-Provides classes, based on jsclasses.
+This package provides an extended version of the Japanese document class
+collection provided by jsclasses. While the original version supports
+only pLaTeX and upLaTeX, the extended version also supports pdfLaTeX,
+XeLaTeX and LuaLaTeX, with the aid of suitable packages that provide
+capability of Japanese typesetting.
 
-%post
-%{_sbindir}/texlive.post
-
-%postun
-if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-fi
-
-#-----------------------------------------------------------------------
-%files
-%{_texmfdistdir}/tex/latex/bxjscls
-%doc %{_texmfdistdir}/doc/latex/bxjscls
-#- source
-%doc %{_texmfdistdir}/source/latex/bxjscls
-
-#-----------------------------------------------------------------------
-%prep
-%setup -c -a1 -a2
-%autopatch -p1
-
-%build
-
-%install
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
